@@ -4,7 +4,7 @@ type Vuelo {
     id: ID!
     Origen: String!
     Destino: String!
-    Fecha: string!
+    Fecha: String!
 }
 
 type Query {
@@ -13,6 +13,6 @@ type Query {
 }
 
 type Mutation {
-    addFlight(Origen: String!, Destino: String!, Fecha:string!):Vuelo!
+    addFlight(Origen: String!, Destino: String!, Fecha:String!):Vuelo!
 }
 `

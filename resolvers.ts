@@ -6,7 +6,7 @@ export const resolvers = {
     Query:{
         getFlights: async (
             _:unknown,
-            arg:{Origen: string, Destino: string},
+            arg:{Origen?: string, Destino?: string},
             context:{VueloCollection: Collection<VueloModel>},
         ):Promise<Vuelo[]> =>{
             if(arg.Origen){
