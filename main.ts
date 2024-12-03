@@ -5,13 +5,13 @@ import {ApolloServer} from "@apollo/server";
 import { resolvers } from "./resolvers.ts";
 import { startStandaloneServer } from "@apollo/server/standalone";
 
-const Mongo = Deno.env.get("Mongo_url");
+//const Mongo = Deno.env.get("Mongo_url");
 
-if (!Mongo) {
-  throw new Error("Please provide a MONGO_URL");
-}
+//if (!Mongo) {
+  //throw new Error("Please provide a MONGO_URL");
+//}
 
-const mongoClient = new MongoClient(Mongo);
+const mongoClient = new MongoClient("mongodb+srv://dmarcosg:123456789abc@nebrijacluster.j3irq.mongodb.net/?retryWrites=true&w=majority&appName=NebrijaCluster");
 await mongoClient.connect();
 
 console.info("Conected to MongoDB");
